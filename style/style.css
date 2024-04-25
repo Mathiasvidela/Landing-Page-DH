@@ -14,6 +14,7 @@ html {
       
 body{
   font-size: 16px; /*1rem = 10px */
+  background-color: #f3f3f1;
 }
 *,*:before,*:after {
     box-sizing: inherit;
@@ -35,6 +36,7 @@ h1 {
     padding: 0 6rem;
     margin: 0 auto;
 }
+
 
 /* ---------------------------Nav-bar */
 
@@ -316,4 +318,222 @@ color: #3672ff;
    .hero_text{
     width: 90%;
    }
+}
+
+/* --------------------------ABOUT US */
+.nosotros{
+    margin: 10rem 0 ;
+}
+.nosotros_img{
+    width: 50%;
+    border-radius: 0 2rem 2rem 0;
+    transition: all .5s ease;
+}
+.nosotros_content{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    background-color: #152d69;
+}
+
+.nosotros_text{
+    color: #f3f3f1;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+.nosotros_text h3{
+/* color: #0b4de8; */
+font-weight: 400;
+font-size: 4rem;
+line-height: 1.2;
+margin-bottom: 1rem;
+}
+.nosotros_text p {
+    font-weight: 200;
+}
+@media (max-width:758px ){
+    .nosotros_content{
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+    }
+    .nosotros_img{
+        width: 100%;
+        height: 20%;
+        border-radius: 0;
+    }
+    .nosotros_text{
+        margin-bottom: 4rem;
+    }
+}
+
+/* -----------------------------SERVICIOS */
+
+.services{
+    margin: 5rem 0;
+    /* text-align: center; Chequear si queda mejor centrado   */
+}
+.services h2{
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.services_cards{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+   
+}
+.s_card{
+    background-color: #f3f3f1;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    color: #0f204a;
+    padding: 4rem;
+    border-radius: 2rem;
+    transition: .4s ease;
+}
+
+.s_card i{
+    color: #0b4de8;
+    font-size: 6rem;
+    transition: .4s ease;
+}
+
+.s_card:hover{
+    background-color: #0b4de8;
+    color: #f3f3f1;
+    cursor: pointer;
+    transform: translateY(-1.1rem);
+}
+.s_card:hover i{
+    color: #f3f3f1;
+}
+
+.s_card h3{
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+.s_card p{
+    line-height: 1.3;
+}
+
+.s_card h3{
+    font-weight: 400;
+}
+.s_card p{
+    font-weight: 200;
+}
+
+@media (max-width:823px ){
+    .services_cards{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 650px){
+    .services_cards{
+        grid-template-columns: 1fr;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .services{
+        text-align: center;
+    }
+}
+/* --------------------------------CONTACTO */
+
+.contact{
+    margin-bottom: 8rem;
+    
+}
+.contact_content{
+    background-color: #e2e2e2;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    
+}
+.contact_content h3{
+    background-color: #0b4de8;
+    color: #f3f3f1;
+    padding: 1rem 2rem;
+    margin-bottom: 3rem;
+    border-radius: 2rem;
+    text-align: center;
+    font-weight: 400;
+}
+.contact_text{
+    /* padding-left:5rem;
+    display: flex;
+    flex-direction: column; */
+    margin: 0 auto;
+    padding: 1rem;
+}
+.contact_text p{
+    display: inline-block;
+    font-weight: 300;
+}
+.contact_text i{
+    font-size: 2.5rem;
+    padding-right: 1rem;
+    color: #0b4de8;
+}
+.contact_text div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.map{
+    padding: 2rem;
+    width: 100%;
+}
+@media (max-width: 823px){
+    .contact_content{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+    .contact_text{
+        padding: 2rem 0 0 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact_text div{
+        text-align: center;
+        
+    }
+    .map{
+        height: 60vh;
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 660px){
+    
+    
+}
+/* -----------------------------FOOTER */
+.footer{
+    background-color: #0b4de8;
+    color: #f3f3f1;
+    padding: 2rem;
+}
+.footer_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer_nav img{
+    width: 11rem;
+}
+.footer_nav p{
+    font-weight: 200;
+}
+.footer_icons{
+    font-size: 2.5rem;
+    display: flex;
+    gap: 2.5rem;
 }
