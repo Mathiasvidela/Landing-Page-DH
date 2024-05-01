@@ -13,8 +13,8 @@ html {
 }
       
 body{
-  font-size: 16px; /*1rem = 10px */
-  background-color: #f3f3f1;
+    font-size: 16px; /*1rem = 10px */
+    background-color: #f3f3f1;
 }
 *,*:before,*:after {
     box-sizing: inherit;
@@ -39,7 +39,10 @@ p{
     padding: 0 6rem;
     margin: 0 auto;
 }
-
+.bold{
+    font-weight: 500;
+    font-size: large;
+}
 
 /* ---------------------------Nav-bar */
 
@@ -115,7 +118,7 @@ p{
     min-height: 100vh;
     /* background: linear-gradient(-24deg, #e2e2e2 0%, #c9d6ff 100%); */
     /* background: rgb(226,226,226); */
-background: linear-gradient(0deg, #f3f3f1 0%, rgba(216,221,238,1) 40%, rgba(208,217,247,1) 73%);
+    background: linear-gradient(0deg, #f3f3f1 0%, rgba(216,221,238,1) 40%, rgba(208,217,247,1) 73%);
     position: relative;
     display: grid;
     align-content: center;
@@ -198,8 +201,8 @@ background: linear-gradient(0deg, #f3f3f1 0%, rgba(216,221,238,1) 40%, rgba(208,
     transition: all .5s ease;
 }
 .icons i:hover{
-transform: scale(1.09);
-color: #3672ff;
+    transform: scale(1.09);
+    color: #3672ff;
 }
 
 .scroll_down{
@@ -305,7 +308,6 @@ color: #3672ff;
     #menu_toggle:checked + label.menu_icon_action + nav{
         /* right: 0; */
         top: 100%;
-
     }
     .nav_bar_logo{
         display: none;
@@ -324,7 +326,7 @@ color: #3672ff;
    }
 }
 
-/* --------------------------ABOUT US */
+/* -------------------------- ABOUT US */
 .nosotros{
     margin: 10rem 0 ;
 }
@@ -346,11 +348,10 @@ color: #3672ff;
     padding: 2rem;
 }
 .nosotros_text h3{
-/* color: #0b4de8; */
-font-weight: 400;
-font-size: 4rem;
-line-height: 1.2;
-margin-bottom: 1rem;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
 }
 .nosotros_text p {
     font-weight: 200;
@@ -386,7 +387,10 @@ margin-bottom: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
-   
+}
+.s_card:nth-child(7){
+    text-align: center;
+    grid-column: 1/4;
 }
 .s_card{
     background-color: #f3f3f1;
@@ -433,6 +437,13 @@ margin-bottom: 1rem;
     .services_cards{
         grid-template-columns: 1fr 1fr;
     }
+    .s_card:nth-child(7){
+        grid-column: 1/3;
+    }
+    .p_card:nth-child(3){
+        grid-column: 1/3;
+        text-align: center;
+    }
 }
 @media (max-width: 650px){
     .services_cards{
@@ -443,6 +454,15 @@ margin-bottom: 1rem;
     }
     .services{
         text-align: center;
+    }
+    .s_card:nth-child(7){
+        grid-column: 1/2;
+    }
+    .p_card:nth-child(3){
+        grid-column: 1/1;
+    }
+    .personal_text{
+        margin-bottom: 4rem;
     }
 }
 
@@ -494,7 +514,6 @@ margin-bottom: 1rem;
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;
-    
 }
 .contact_content h3{
     background-color: #0b4de8;
@@ -572,5 +591,5 @@ margin-bottom: 1rem;
     gap: 2.5rem;
 }
 .footer_icons i{
-color: #f3f3f1;
+    color: #f3f3f1;
 }
