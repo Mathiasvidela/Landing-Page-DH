@@ -95,6 +95,7 @@ p{
    color:#f3f3f1;
    z-index: 6;
    cursor: pointer;
+   display: none;
 }
 
 #menu_toggle{
@@ -305,10 +306,14 @@ p{
     .nav_bar_list a{
         display: block;
     }
-    #menu_toggle:checked + label.menu_icon_action + nav{
-        /* right: 0; */
+    /* #menu_toggle:checked + label.menu_icon_action + nav{
+        
+        top: 100%;
+    } */
+    .nav_bar_list.open{
         top: 100%;
     }
+
     .nav_bar_logo{
         display: none;
     }
