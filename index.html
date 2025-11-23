@@ -10,7 +10,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
     <link rel="icon" type="image/png" href="/src/img/favicon.png"/>
-    <title>Lucero & asociados</title>
+    <title>Lucero & Asociados | Estudio Contable Integral</title>
+    <meta name="description" content="Estudio Contable Integral en Argentina. Asesoramiento experto en Monotributo, Liquidación de Sueldos, Impuestos y Gestión para PyMEs y Autónomos.">
+    <meta name="keywords" content="Estudio Contable, Contador, Liquidación de Sueldos, Monotributo, Argentina, Asesoramiento Impositivo, PyMEs, Autónomos">
+    <meta name="author" content="Lucero & Asociados">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luceroyasociados.com/">
+    <meta property="og:title" content="Lucero & Asociados | Estudio Contable Integral">
+    <meta property="og:description" content="Asesoramiento experto en Monotributo, Liquidación de Sueldos, Impuestos y Gestión para PyMEs.">
+    <meta property="og:image" content="/src/img/img_hero.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://luceroyasociados.com/">
+    <meta property="twitter:title" content="Lucero & Asociados | Estudio Contable Integral">
+    <meta property="twitter:description" content="Asesoramiento experto en Monotributo, Liquidación de Sueldos, Impuestos y Gestión para PyMEs.">
+    <meta property="twitter:image" content="/src/img/img_hero.png">
   </head>
   <body>
     <header>
@@ -46,8 +63,19 @@
           <a href="https://wa.link/9sofe9" class="btn btn_icon">Contáctanos <i class="ri-chat-smile-fill ico"></i></a>
         </div>
   
-        <div>
+        <div class="hero_img_container">
           <img class="img_hero" src="/src/img/img_hero.png" alt="imagen hero">
+          
+          <!-- Floating Icons -->
+          <div class="float_icon icon_1">
+            <i class="ri-bar-chart-grouped-fill"></i>
+          </div>
+          <div class="float_icon icon_2">
+            <i class="ri-shield-check-fill"></i>
+          </div>
+          <div class="float_icon icon_3">
+            <i class="ri-coins-fill"></i>
+          </div>
         </div>
 
     </section>
@@ -64,13 +92,21 @@
       </a>
     </div>
 
-    <section class="nosotros" id="about">
+    <section class="nosotros container" id="about">
       <div class="nosotros_content">
-        <img src="/src/img/section22.jpg" alt="imagen persona preocupada" class="nosotros_img">
+        <div class="nosotros_img_wrapper">
+             <img src="/src/img/section22.jpg" alt="Equipo Lucero & Asociados" class="nosotros_img">
+             <div class="experience_badge">
+                <span class="counter" data-target="30">0</span><span>+</span>
+                <p>Años de<br>Experiencia</p>
+             </div>
+        </div>
         <div class="nosotros_text">
-          <h3>Sobre Nosotros</h3>
-          <p>Con más de <span class="bold">30 años de experiencia</span>, nos enorgullece ser tu aliado confiable en cuestiones contables y fiscales en la hermosa provincia de San Luis, Argentina.
-          nos dedicamos a proporcionar soluciones contables integrales para empresas y profesionales. Nos esforzamos por entender las metas y desafíos únicos de cada cliente para brindar asesoramiento personalizado y estrategias financieras efectivas.</p>
+          <span class="section_subtitle">NUESTRA HISTORIA</span>
+          <h3>Tu aliado confiable en <br>soluciones contables</h3>
+          <p>Nos enorgullece ser tu socio estratégico en cuestiones contables y fiscales en la hermosa provincia de San Luis, Argentina.</p>
+          <p>Nos dedicamos a proporcionar soluciones integrales para empresas y profesionales, esforzándonos por entender las metas y desafíos únicos de cada cliente para brindar asesoramiento personalizado.</p>
+          <a href="#contact" class="btn">Conoce más</a>
         </div>
       </div>
     </section>
@@ -165,40 +201,174 @@
       </div>
     </section>
 
+    <section class="testimonials container">
+      <div class="section_header text-center">
+        <span class="section_subtitle">TESTIMONIOS</span>
+        <h2>Lo que dicen nuestros clientes</h2>
+      </div>
+      
+      <div class="testimonials_grid">
+        
+        <div class="testimonial_card">
+          <div class="quote_icon"><i class="ri-double-quotes-l"></i></div>
+          <p class="review_text">"Lucero & Asociados ha sido fundamental para el ordenamiento de mi empresa. Su asesoramiento es claro, preciso y siempre están disponibles para resolver dudas. Altamente recomendados."</p>
+          <div class="client_info">
+            <div class="client_details">
+              <h5>Carlos Mendez</h5>
+              <span>Dueño de Pyme - Construcción</span>
+            </div>
+            <div class="stars">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial_card">
+          <div class="quote_icon"><i class="ri-double-quotes-l"></i></div>
+          <p class="review_text">"Excelente servicio para monotributistas. Me ayudaron a recategorizarme correctamente y evitar multas. La tranquilidad de tener todo al día no tiene precio."</p>
+          <div class="client_info">
+            <div class="client_details">
+              <h5>Mariana Lopez</h5>
+              <span>Diseñadora Gráfica Freelance</span>
+            </div>
+            <div class="stars">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial_card">
+          <div class="quote_icon"><i class="ri-double-quotes-l"></i></div>
+          <p class="review_text">"Llevamos años trabajando con ellos para la liquidación de sueldos de nuestra fundación. Son muy profesionales y detallistas. Un equipo de confianza."</p>
+          <div class="client_info">
+            <div class="client_details">
+              <h5>Roberto Gomez</h5>
+              <span>Director de Fundación</span>
+            </div>
+            <div class="stars">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="faq container">
+      <div class="section_header text-center">
+        <span class="section_subtitle">PREGUNTAS FRECUENTES</span>
+        <h2>Resolvemos tus dudas</h2>
+      </div>
+
+      <div class="faq_container">
+        
+        <div class="faq_item">
+          <div class="faq_question">
+            <h4>¿Cómo puedo solicitar un presupuesto?</h4>
+            <i class="ri-add-line"></i>
+          </div>
+          <div class="faq_answer">
+            <p>Puedes solicitar un presupuesto personalizado contactándonos a través de nuestro formulario web, por WhatsApp o enviándonos un correo electrónico. Analizaremos tu situación y te ofreceremos una propuesta acorde a tus necesidades.</p>
+          </div>
+        </div>
+
+        <div class="faq_item">
+          <div class="faq_question">
+            <h4>¿Trabajan con clientes de todo el país?</h4>
+            <i class="ri-add-line"></i>
+          </div>
+          <div class="faq_answer">
+            <p>Sí, gracias a las herramientas digitales actuales, brindamos asesoramiento y gestión contable a clientes de toda Argentina de manera remota y eficiente.</p>
+          </div>
+        </div>
+
+        <div class="faq_item">
+          <div class="faq_question">
+            <h4>¿Qué documentación necesito para inscribirme en el Monotributo?</h4>
+            <i class="ri-add-line"></i>
+          </div>
+          <div class="faq_answer">
+            <p>Generalmente necesitas tu DNI y Clave Fiscal nivel 3. Nosotros te guiamos en todo el proceso para obtenerla y realizar la inscripción en la categoría correcta.</p>
+          </div>
+        </div>
+
+        <div class="faq_item">
+          <div class="faq_question">
+            <h4>¿Realizan auditorías contables?</h4>
+            <i class="ri-add-line"></i>
+          </div>
+          <div class="faq_answer">
+            <p>Sí, realizamos auditorías de estados contables para empresas, asegurando la transparencia y el cumplimiento de las normas contables vigentes.</p>
+          </div>
+        </div>
+
+        <div class="faq_item">
+          <div class="faq_question">
+            <h4>¿Cómo es el proceso de liquidación de sueldos?</h4>
+            <i class="ri-add-line"></i>
+          </div>
+          <div class="faq_answer">
+            <p>Nos encargamos de todo: desde el alta del empleado, liquidación mensual, presentación de cargas sociales (F.931) hasta la emisión de los recibos de sueldo digitales.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <section class="contact container" id="contact">
+      <div class="contact_header">
+        <span class="section_subtitle">CONTACTO</span>
+        <h2>Estamos aquí para ayudarte</h2>
+      </div>
+      
       <div class="contact_content">
         
-        <div class="contact_text">
+        <div class="contact_info_wrapper">
+            <div class="contact_item">
+                <div class="icon_box">
+                    <i class="ri-map-pin-2-fill"></i>
+                </div>
+                <div class="info_text">
+                    <h4>Ubicación</h4>
+                    <p>Barrio 157 viv mzna340 c20<br>San Luis Capital, Argentina</p>
+                </div>
+            </div>
 
-          <h3>
-            Contactactanos
-          </h3>
+            <div class="contact_item">
+                <div class="icon_box">
+                    <i class="ri-whatsapp-fill"></i>
+                </div>
+                <div class="info_text">
+                    <h4>WhatsApp</h4>
+                    <p>2664-953845</p>
+                </div>
+            </div>
 
-          <div>
-            <i class="ri-map-pin-2-fill"></i>
-            <p>San Luis Capital, Argentina</p>
-          </div>
-          <div>
-            <i class="ri-navigation-fill"></i>
-            <p>Barrio 157 viv mzna340 c20</p>
-          </div>
-
-          <div>
-            <i class="ri-whatsapp-fill"></i>
-            <p>2664-953845</p>
-          </div>
-
-          <div>
-            <i class="ri-mail-fill"></i>
-            <p>ymlucero26@gmail.com</p>
-          </div>
-
+            <div class="contact_item">
+                <div class="icon_box">
+                    <i class="ri-mail-fill"></i>
+                </div>
+                <div class="info_text">
+                    <h4>Email</h4>
+                    <p>ymlucero26@gmail.com</p>
+                </div>
+            </div>
         </div>
         
-        <div>
-           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d833.9764155602106!2d-66.30056343041196!3d-33.26896197703722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d43eef035f7c6d%3A0xa6efdcd4722c79dd!2sLeonardo%20Da%20Vinci%2C%20San%20Luis%2C%20Argentina!5e0!3m2!1ses-419!2sit!4v1714083912400!5m2!1ses-419!2sit" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+        <div class="map_wrapper">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d833.9764155602106!2d-66.30056343041196!3d-33.26896197703722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d43eef035f7c6d%3A0xa6efdcd4722c79dd!2sLeonardo%20Da%20Vinci%2C%20San%20Luis%2C%20Argentina!5e0!3m2!1ses-419!2sit!4v1714083912400!5m2!1ses-419!2sit" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
         </div>
 
+      </div>
+    </section>
+
+    <section class="cta_final container">
+      <div class="cta_content">
+        <h2>¿Listo para ordenar tus finanzas?</h2>
+        <p>Contáctanos hoy mismo y empecemos a trabajar en el éxito de tu negocio.</p>
+        <a href="https://wa.link/9sofe9" class="btn btn_cta">
+          Hablemos por WhatsApp <i class="ri-whatsapp-fill"></i>
+        </a>
       </div>
     </section>
 
@@ -212,6 +382,17 @@
           </div>
       </div>
     </footer>
+
+    <!-- Modal Structure -->
+    <div class="modal-overlay" id="modal-overlay">
+      <div class="modal-content">
+        <span class="close-modal" id="close-modal">&times;</span>
+        <h3 id="modal-title">Titulo del Servicio</h3>
+        <p id="modal-description">Descripción detallada del servicio...</p>
+      </div>
+    </div>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/src/main.js"></script>
   </body>
 </html>
 
