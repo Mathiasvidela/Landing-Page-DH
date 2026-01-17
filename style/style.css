@@ -1165,3 +1165,75 @@ p{
     line-height: 1.8;
     color: #555;
 }
+
+/* -----------------------------TEAM */
+
+.team {
+    margin: 10rem auto;
+}
+
+.team_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    margin-top: 5rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team_card {
+    background-color: #ffffff;
+    padding: 4rem 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all .4s ease;
+    border: 1px solid rgba(0,0,0,0.04);
+}
+
+.team_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(11, 77, 232, 0.12);
+}
+
+.team_img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background-color: rgba(11, 77, 232, 0.1);
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0b4de8;
+    font-size: 5rem;
+    transition: all .4s ease;
+}
+
+.team_card:hover .team_img {
+    background-color: #0b4de8;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.team_info h3 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #0f204a;
+    margin-bottom: 0.5rem;
+}
+
+.team_info p {
+    font-size: 1.6rem;
+    color: #666;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .team_grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 0 2rem;
+    }
+}
