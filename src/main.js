@@ -23,12 +23,15 @@ function scrollActive(){
     sections.forEach(current =>{
         const sectionHeight = current.offsetHeight
         const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
+        const sectionId = current.getAttribute('id')
+        const navLink = document.querySelector('.nav_bar_list a[href="#' + sectionId + '"]')
+
+        if (!navLink) return;
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav_bar_list a[href*=' + sectionId + ']').classList.add('active-link')
+            navLink.classList.add('active-link')
         }else{
-            document.querySelector('.nav_bar_list a[href*=' + sectionId + ']').classList.remove('active-link')
+            navLink.classList.remove('active-link')
         }
     })
 }
@@ -45,6 +48,7 @@ window.addEventListener('scroll', scrollHeader)
 /*==================== SHOW SCROLL UP ====================*/ 
 function scrollUp(){
     const scrollUp = document.getElementById('scroll-up');
+    if (!scrollUp) return;
     // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
     if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
 }
@@ -52,24 +56,26 @@ window.addEventListener('scroll', scrollUp)
 
 
 /*==================== SCROLL REVEAL ANIMATION ====================*/
-const sr = ScrollReveal({
+const sr = window.ScrollReveal ? ScrollReveal({
     origin: 'top',
     distance: '60px',
     duration: 1000,
     delay: 200,
     // reset: true 
-})
+}) : null
 
-sr.reveal('.hero_text, .nosotros_img')
-sr.reveal('.img_hero', {delay: 500})
-sr.reveal('.float_icon', {delay: 800, interval: 200})
-sr.reveal('.nosotros_text', {origin: 'right'})
-sr.reveal('.s_card', {interval: 100})
-sr.reveal('.testimonial_card', {interval: 100})
-sr.reveal('.faq_item', {interval: 100})
-sr.reveal('.cta_content', {origin: 'bottom', scale: 0.9})
-sr.reveal('.contact_content', {origin: 'bottom'})
-sr.reveal('.footer_nav', {origin: 'bottom'})
+if (sr) {
+    sr.reveal('.hero_text, .nosotros_img')
+    sr.reveal('.img_hero', {delay: 350})
+    sr.reveal('.hero_stamp, .hero_note', {delay: 500, interval: 120})
+    sr.reveal('.nosotros_text', {origin: 'right'})
+    sr.reveal('.s_card', {interval: 70})
+    sr.reveal('.testimonial_card', {interval: 90})
+    sr.reveal('.faq_item', {interval: 70})
+    sr.reveal('.cta_content', {origin: 'bottom', scale: 0.96})
+    sr.reveal('.contact_content', {origin: 'bottom'})
+    sr.reveal('.footer_nav', {origin: 'bottom'})
+}
 
 /*==================== NUMBER COUNTER ANIMATION ====================*/
 const counters = document.querySelectorAll('.counter');
@@ -145,6 +151,9 @@ serviceCards.forEach(card => {
         modalOverlay.classList.add('active');
         document.body.style.overflow = 'hidden'; // Prevent background scrolling
     });
+
+    const directLink = card.querySelector('a');
+    if (directLink) directLink.addEventListener('click', event => event.stopPropagation());
 });
 
 // Close Modal
@@ -153,10 +162,10 @@ function closeModal() {
     document.body.style.overflow = '';
 }
 
-closeModalBtn.addEventListener('click', closeModal);
+if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
 
 // Close on overlay click
-modalOverlay.addEventListener('click', (e) => {
+modalOverlay?.addEventListener('click', (e) => {
     if (e.target === modalOverlay) {
         closeModal();
     }
